@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+
+import encdec
+encdec.encode(encdec.Base64EncDec)
