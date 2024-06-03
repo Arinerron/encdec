@@ -59,6 +59,9 @@ class HexEncDec(ByteStreamEncDec):
 
     def decode(self, i, o):
         while (b := i.read(2)):
+            # skip 0x, regardless of where it is
+            if b == b'0x':
+                continue
             o.write(self.dec_func(b))
 
 
